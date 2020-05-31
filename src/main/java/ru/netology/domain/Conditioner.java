@@ -21,36 +21,8 @@ public class Conditioner {
         currentTemperature--;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setMaxTemperature(int maxTemperature) {
-        this.maxTemperature = maxTemperature;
-    }
-
-    public int getMaxTemperature() {
-        return maxTemperature;
-    }
-
-    public void setMinTemperature(int minTemperature) {
-        this.minTemperature = minTemperature;
-    }
-
-    public int getMinTemperature() {
-        return minTemperature;
-    }
-
     public void setOn(boolean on) {
         this.on = on;
-    }
-
-    public boolean getOn() {
-        return on;
     }
 
     public void setCurrentTemperature(int currentTemperature) {
