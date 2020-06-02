@@ -7,8 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ConditionerTest {
 
     @Test
-    void increaseCurrentTemperature() {
+    void TestIncreaseCurrentTemperature() {
         Conditioner conditioner = new Conditioner();
+        conditioner.getName();
+        conditioner.getMaxTemperature();
+        conditioner.getMinTemperature();
         conditioner.setOn(true);
         conditioner.setCurrentTemperature(31);
         conditioner.increaseCurrentTemperature();
