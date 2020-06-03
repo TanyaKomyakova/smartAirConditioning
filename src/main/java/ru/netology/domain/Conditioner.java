@@ -42,7 +42,6 @@ public class Conditioner {
         if (currentTemperature <= minTemperature) {
             return;
         }
-
         this.currentTemperature = currentTemperature;
     }
 
@@ -56,13 +55,15 @@ public class Conditioner {
 
     public void increaseCurrentTemperature(){
         if (currentTemperature == maxTemperature){
-
+            currentTemperature = minTemperature;
+            return;
        }
       currentTemperature++;
   }
 
     public void decreaseCurrentTemperature(){
-        if (currentTemperature <= minTemperature){
+        if (currentTemperature == minTemperature){
+            currentTemperature = maxTemperature;
             return;
         }
         currentTemperature--;
