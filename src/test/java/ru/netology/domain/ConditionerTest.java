@@ -13,9 +13,9 @@ class ConditionerTest {
         conditioner.getMaxTemperature();
         conditioner.getMinTemperature();
         conditioner.setOn(true);
-        conditioner.setCurrentTemperature(31);
+        conditioner.setCurrentTemperature(15);
         conditioner.increaseCurrentTemperature();
-        int expected = 30;
+        int expected = 16;
         int actual = conditioner.getCurrentTemperature();
         assertEquals(expected,actual);
 
