@@ -22,12 +22,12 @@ class ConditionerTest {
     }
 
     @Test
-    public void decreaseCurrentTemperature() {
+    public void TestdecreaseCurrentTemperature() {
         Conditioner conditioner = new Conditioner();
         conditioner.setOn(true);
         conditioner.setCurrentTemperature(15);
         conditioner.decreaseCurrentTemperature();
-        int expected = 15;
+        int expected = 14;
         int actual = conditioner.getCurrentTemperature();
         assertEquals(expected,actual);
     }
