@@ -13,9 +13,9 @@ class ConditionerTest {
         conditioner.getMaxTemperature();
         conditioner.getMinTemperature();
         conditioner.setOn(true);
-        conditioner.setCurrentTemperature(15);
+        conditioner.setCurrentTemperature(31);
         conditioner.increaseCurrentTemperature();
-        int expected = 16;
+        int expected = 30;
         int actual = conditioner.getCurrentTemperature();
         assertEquals(expected,actual);
 
@@ -24,11 +24,43 @@ class ConditionerTest {
     @Test
     public void TestdecreaseCurrentTemperature() {
         Conditioner conditioner = new Conditioner();
+        conditioner.getName();
+        conditioner.getMaxTemperature();
+        conditioner.getMinTemperature();
         conditioner.setOn(true);
-        conditioner.setCurrentTemperature(15);
+        conditioner.setCurrentTemperature(14);
         conditioner.decreaseCurrentTemperature();
-        int expected = 14;
+        int expected = 15;
         int actual = conditioner.getCurrentTemperature();
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void impossibleToGoBeyondTheMaximum() {
+        Conditioner conditioner = new Conditioner();
+        conditioner.getName();
+        conditioner.getMaxTemperature();
+        conditioner.getMinTemperature();
+        conditioner.setOn(true);
+        conditioner.setCurrentTemperature(30);
+        conditioner.setMaxTemperature(31);
+        int expected = 30;
+        int actual = conditioner.getCurrentTemperature();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void impossibleToGoBeyondTheMiniimum() {
+        Conditioner conditioner = new Conditioner();
+        conditioner.getName();
+        conditioner.getMaxTemperature();
+        conditioner.getMinTemperature();
+        conditioner.setOn(true);
+        conditioner.setCurrentTemperature(15);
+        conditioner.setMaxTemperature(14);
+        int expected = 15;
+        int actual = conditioner.getCurrentTemperature();
+        assertEquals(expected,actual);
+    }
+
 }
